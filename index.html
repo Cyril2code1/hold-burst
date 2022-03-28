@@ -14,11 +14,36 @@
     <!-- personnal css -->
     <link rel="stylesheet" href="style.css" />
 
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon" />
     <title>Hold or Burst - dice game</title>
   </head>
   <body>
-    <div id="deviceReadyToPlay">ready to play</div>
+    <main id="deviceReadyToPlay">
+      <section>
+        <!-- player 1 -->
+        <div id="global1">13</div>
+        <div>current: <span id="round1">37</span></div>
+      </section>
 
+      <section>
+        <!-- player 2 -->
+        <div id="global2">13</div>
+        <div>current: <span id="round2">37</span></div>
+      </section>
+
+      <!-- dice image -->
+
+      <!-- button 'new game' -->
+      <button id="newGame" class="btn btn-primary">NEW GAME</button>
+      <!-- show dice result -->
+      <img src="./img/face0.svg" id="dice" alt="dice result" class="w-25" />
+      <!-- button 'roll dice' -->
+      <button id="rollDice" class="btn btn-warning">ROLL DICE</button>
+      <!-- button 'hold' -->
+      <button id="hold" class="btn btn-success">HOLD</button>
+    </main>
+
+    <!-- shown if device is in portrait mode  -->
     <div id="warning" class="card text-center mt-3 mx-2">
       <div class="card-body">
         <h2 class="card-title">Welcome on Hold or Burst</h2>
