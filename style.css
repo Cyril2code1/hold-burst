@@ -1,0 +1,18 @@
+#warning {
+  display: none;
+}
+
+@media only screen and (orientation: portrait) {
+  #deviceReadyToPlay {
+    display: none;
+  }
+  #warning {
+    display: block;
+  }
+}
+
+@media only screen and (orientation: landscape) {
+  #warning {
+    display: none;
+  }
+}
