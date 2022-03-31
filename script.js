@@ -11,19 +11,22 @@ startGame();
 
 function startGame() {
   //reset variable
-  player = 1; // active player
+  document.getElementById(`global1`).classList.remove("winner");
+  document.getElementById(`global2`).classList.remove("winner");
+  player = 1; // player 1 will start the game
   round = 0;
   global = [0, 0]; // keep total scores of player 1 and player 2
   // reset display
   dice.src = "./img/face0.svg";
+  dice.classList.remove("shadow");
   document.getElementById(`round1`).textContent = round;
   document.getElementById(`round2`).textContent = round;
   document.getElementById(`global1`).textContent = global[0];
   document.getElementById(`global2`).textContent = global[1];
-
+  // set field1 (for player1) to active
   field1.classList.add("active");
   field2.classList.remove("active");
-
+  // just need to roll dice, no need to hold when the game start
   btnRollDice.addEventListener("click", rollDice);
 }
 
@@ -34,6 +37,7 @@ function rollDice() {
   let result = Math.floor(Math.random() * 6) + 1;
   // show the result
   dice.src = `./img/face${result}.svg`;
+  dice.classList.add("shadow");
   //  process the result
   if (result === 1) {
     round = 0;
@@ -51,7 +55,7 @@ function changePlayer() {
   document.getElementById(`round${player}`).textContent = round;
   // prevent next player to hold a void score
   btnHold.removeEventListener("click", addGlobal);
-  //toggle active class
+  //toggle active class to switch the active field
   field1.classList.toggle("active");
   field2.classList.toggle("active");
   // change player
@@ -68,11 +72,11 @@ function addGlobal() {
     changePlayer();
   } else {
     // player = winner
-    alert(`player${player} is the winner !!!`);
+    document.getElementById(`global${player}`).classList.add("winner");
     // endgame remove roll and hold event listener
     btnRollDice.removeEventListener("click", rollDice);
     btnHold.removeEventListener("click", addGlobal);
   }
 }
-
+// start game event listener always active
 btnNewGame.addEventListener("click", startGame);

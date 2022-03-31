@@ -25,13 +25,15 @@
   </head>
   <body class="fw-light">
     <main id="deviceReadyToPlay">
+      <!-- game board -->
       <div class="vh-100 d-flex flex-wrap">
+        <!-- player 1 side  -->
         <section
           class="w-50 d-flex flex-column align-items-center justify-content-between"
           id="field1"
         >
           <div class="mt-2">
-            <p class="player">PLAYER 1</p>
+            <p class="player text-center">PLAYER 1</p>
             <div id="global1" class="mt-0 p-0 text-center text-danger">13</div>
           </div>
           <div class="my-5 current bg-danger">
@@ -39,13 +41,13 @@
             <p id="round1" class="text-center m-0 pt-0 text-white">37</p>
           </div>
         </section>
-
+        <!-- player 2 side -->
         <section
           class="w-50 d-flex flex-column align-items-center justify-content-between"
           id="field2"
         >
           <div class="mt-2">
-            <p class="player">PLAYER 2</p>
+            <p class="player text-center">PLAYER 2</p>
             <div id="global2" class="mt-0 p-0 text-center text-danger">13</div>
           </div>
           <div class="my-5 current bg-danger">
@@ -53,7 +55,7 @@
             <p id="round2" class="text-center m-0 pt-0 text-white">37</p>
           </div>
         </section>
-
+        <!-- playing middle part (over players parts) -->
         <section
           class="vh-100 w-25 position-absolute start-50 translate-middle-x d-flex flex-column align-items-center justify-content-between"
         >

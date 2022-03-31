@@ -15,11 +15,11 @@ body {
 
 #global1,
 #global2 {
-  font-size: 4rem;
+  font-size: 3.5rem;
 }
 
 #dice {
-  max-height: 150px;
+  height: 7rem;
 }
 
 .button:hover {
@@ -41,17 +41,26 @@ body {
 }
 
 .active {
-  background-color: lightblue;
+  background-color: rgba(173, 216, 230, 0.75);
 }
 
 .active .player {
-  font-weight: 700;
+  font-weight: 900;
 }
 
 .active .player::after {
   content: "\2022";
+  font-size: 2.5rem;
+  color: red;
+}
+
+.winner::before {
+  content: "\265B";
   font-size: 3rem;
-  color: #ff0000;
+  background-color: black;
+  color: rgba(255, 217, 0, 0.781);
+  border: 1px solid black;
+  border-radius: 50%;
 }
 
 /* portrait or landscape display */
