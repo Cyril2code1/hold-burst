@@ -6,6 +6,41 @@ body {
   font-family: "Lato", sans-serif;
 }
 
+.player {
+  padding: 0;
+  margin-bottom: 0;
+  margin-top: 4rem;
+  font-size: 2.5rem;
+}
+
+#global1,
+#global2 {
+  font-size: 4rem;
+}
+
+#dice {
+  max-height: 150px;
+}
+
+.button:hover {
+  border: 1px solid black;
+}
+
+.button:active {
+  border: 2px solid orangered;
+}
+
+.current {
+  font-size: 0.7rem;
+  padding: 0.5rem;
+}
+
+#round1,
+#round2 {
+  font-size: 1rem;
+}
+
+/* portrait or landscape display */
 @media only screen and (orientation: portrait) {
   #deviceReadyToPlay {
     display: none;

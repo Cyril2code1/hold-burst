@@ -23,40 +23,55 @@
     <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon" />
     <title>Hold or Burst - dice game</title>
   </head>
-  <body>
+  <body class="fw-light">
     <main id="deviceReadyToPlay">
       <div class="vh-100 d-flex flex-wrap">
-        <section class="w-50 d-flex flex-column align-items-center bg-info">
-          <h2>PLAYER 1</h2>
-          <div id="global1">13</div>
-          <div>
-            <p>CURRENT:</p>
-            <p id="round1" class="text-center">37</p>
-          </div>
-        </section>
-
         <section
-          class="w-50 d-flex flex-column align-items-center bg-secondary"
+          class="w-50 d-flex flex-column align-items-center justify-content-between"
         >
-          <h2>PLAYER 2</h2>
-          <div id="global2">13</div>
-          <div>
-            <p>CURRENT:</p>
-            <p id="round2" class="text-center">37</p>
+          <div class="mt-5">
+            <p class="player">PLAYER 1</p>
+            <div id="global1" class="mt-0 p-0 text-center text-danger">13</div>
+          </div>
+          <div class="my-5 current bg-danger">
+            <p class="m-0">CURRENT</p>
+            <p id="round1" class="text-center m-0 pt-0 text-white">37</p>
           </div>
         </section>
 
         <section
-          class="position-absolute start-50 translate-middle-x d-flex flex-column align-items-center"
+          class="w-50 d-flex flex-column align-items-center justify-content-between"
+        >
+          <div class="mt-5">
+            <p class="player">PLAYER 2</p>
+            <div id="global2" class="mt-0 p-0 text-center text-danger">13</div>
+          </div>
+          <div class="my-5 current bg-danger">
+            <p class="m-0">CURRENT</p>
+            <p id="round2" class="text-center m-0 pt-0 text-white">37</p>
+          </div>
+        </section>
+
+        <section
+          class="vh-100 w-25 position-absolute start-50 translate-middle-x d-flex flex-column align-items-center justify-content-between"
         >
           <!-- 'button new game' -->
-          <div id="newGame">NEW GAME</div>
+          <div id="newGame" class="button p-3 mt-5">[-]NEW GAME</div>
           <!-- show dice result -->
-          <img src="./img/face0.svg" id="dice" alt="dice result" class="w-50" />
-          <!-- 'button roll dice' -->
-          <div id="rollDice">ROLL DICE</div>
-          <!-- 'button hold' -->
-          <div id="hold">HOLD</div>
+          <img
+            src="./img/face0.svg"
+            id="dice"
+            alt="dice result"
+            class="shadow"
+          />
+          <div class="my-5">
+            <!-- 'button roll dice' -->
+            <div id="rollDice" class="button text-center mb-2 p-1">
+              [-] ROLL DICE
+            </div>
+            <!-- 'button hold' -->
+            <div id="hold" class="button text-center p-1">[-]HOLD</div>
+          </div>
         </section>
       </div>
     </main>
