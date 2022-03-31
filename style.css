@@ -40,6 +40,20 @@ body {
   font-size: 1rem;
 }
 
+.active {
+  background-color: lightblue;
+}
+
+.active .player {
+  font-weight: 700;
+}
+
+.active .player::after {
+  content: "\2022";
+  font-size: 3rem;
+  color: #ff0000;
+}
+
 /* portrait or landscape display */
 @media only screen and (orientation: portrait) {
   #deviceReadyToPlay {

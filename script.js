@@ -3,6 +3,9 @@ const btnRollDice = document.getElementById("rollDice");
 const btnHold = document.getElementById("hold");
 const dice = document.getElementById("dice");
 
+const field1 = document.getElementById("field1");
+const field2 = document.getElementById("field2");
+
 let player, round, global, playingGame;
 startGame();
 
