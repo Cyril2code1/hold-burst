@@ -21,6 +21,9 @@ function startGame() {
   document.getElementById(`global1`).textContent = global[0];
   document.getElementById(`global2`).textContent = global[1];
 
+  field1.classList.add("active");
+  field2.classList.remove("active");
+
   btnRollDice.addEventListener("click", rollDice);
 }
 
@@ -48,6 +51,9 @@ function changePlayer() {
   document.getElementById(`round${player}`).textContent = round;
   // prevent next player to hold a void score
   btnHold.removeEventListener("click", addGlobal);
+  //toggle active class
+  field1.classList.toggle("active");
+  field2.classList.toggle("active");
   // change player
   player = player === 1 ? 2 : 1;
 }
