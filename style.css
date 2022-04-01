@@ -40,20 +40,24 @@ body {
   font-size: 1rem;
 }
 
+/* background for the active player's field */
 .active {
   background-color: rgba(173, 216, 230, 0.75);
 }
 
+/* biggest font-weight for the active player */
 .active .player {
   font-weight: 900;
 }
 
+/* dot for the active player */
 .active .player::after {
   content: "\2022";
   font-size: 2.5rem;
   color: red;
 }
 
+/* crown for the winner */
 .winner::before {
   content: "\265B";
   font-size: 3rem;
@@ -61,6 +65,21 @@ body {
   color: rgba(255, 217, 0, 0.781);
   border: 1px solid black;
   border-radius: 50%;
+}
+
+#regles {
+  display: none;
+  margin-left: -50%;
+  margin-right: -50%;
+  text-align: center;
+  font-size: 0.7rem;
+  padding: 5px;
+  background-color: aliceblue;
+  border: 1px dashed black;
+}
+
+#newGame:hover #regles{
+  display:block;
 }
 
 /* portrait or landscape display */

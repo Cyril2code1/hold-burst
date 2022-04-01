@@ -66,7 +66,18 @@
         >
           <!-- 'button new game' -->
           <div id="newGame" class="button p-3 mt-3">
-            <span>&#9989;</span> NEW GAME
+            <span>&#9989;</span> NEW GAME           
+          <div id="regles">Règles : <br>
+            Le jeu comprend 2 joueurs sur un seul et même écran. <br>
+            Chaque joueur possède un score 'current' temporaire  (ROUND) et un score global (GLOBAL). <br>
+            À chaque tour, le joueur a son ROUND initialisé à 0 et peut lancer un dé autant de fois qu'il le souhaite. Le
+            résultat d’un lancer est ajouté au ROUND. <br>
+            Lors de son tour, le joueur peut décider à tout moment de: <br>
+            - Cliquer sur l’option “Hold”, qui permet d’envoyer les points du ROUND vers le GLOBAL. Ce sera alors le
+            tour de l’autre joueur. <br>
+            - Lancer le dé. S’il obtient un 1, son score ROUND est perdu et c’est la fin de son tour. <br>
+            Le premier joueur qui atteint les 100 points sur global gagne le jeu.
+          </div>
           </div>
           <!-- show dice result -->
           <img
@@ -85,7 +96,7 @@
               <span>&#9995;</span> HOLD
             </div>
           </div>
-        </section>
+        </section>    
       </div>
     </main>
 
